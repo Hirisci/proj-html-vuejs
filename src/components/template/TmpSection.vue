@@ -1,6 +1,9 @@
 <template>
   <section>
-    <div :class="{ reverse: isReverse, center: isCenter }" class="container">
+    <div
+      :class="{ reverse: isReverse, center: isCenter, column: isColumns }"
+      class="container"
+    >
       <div class="content">
         <slot />
       </div>
@@ -23,6 +26,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isColumns: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -30,17 +37,19 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-
   &.reverse {
     flex-direction: row-reverse;
   }
-  .content {
-    width: 35%;
-  }
+
   &.center {
     align-items: center;
+  }
+  &.column {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
   }
 }
 </style>

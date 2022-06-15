@@ -28,18 +28,94 @@
       </TmpSection>
     </div>
     <!-- fine hero -->
+    <!-- section build you dream -->
+    <TmpSection class="class" :isColumns="true">
+      <ASubTitle text="start learning coding language" />
+      <ATitle class="class_title" text="build your dream" textColor="TODAY" />
+      <template #img>
+        <div class="class_list">
+          <TmpCardSecondary
+            v-for="(card, idx) in cards"
+            :key="idx"
+            :item="card"
+          />
+        </div>
+      </template>
+    </TmpSection>
+    <!-- /section build you dream -->
+    <!-- section carrier -->
+    <TmpSection class="carrier" :isReverse="true">
+      <template #img>
+        <div class="carrier_img">
+          <img
+            class="carrier_img_one"
+            src="@/assets/screenshot/underlay-shape-lilla.svg"
+            alt=""
+          />
+          <img
+            class="carrier_img_two"
+            src="@/assets/img/about-us-03-image-01.png"
+            alt=""
+          />
+        </div>
+      </template>
+      <div class="carrier_content">
+        <ASubTitle text="Dream with maxCoach" />
+        <div class="carrier_content-title">
+          <ATitle text="construct a " textColor="stunning" />
+          <ATitle text="career perspective" />
+        </div>
+        <div class="carrier_content-body"></div>
+      </div>
+    </TmpSection>
   </main>
 </template>
 
 <script>
 import AButton from "../atom/AButton.vue";
+import ASubTitle from "../atom/ASubTitle.vue";
 import AText from "../atom/AText.vue";
 import ATitle from "../atom/ATitle.vue";
+import TmpCardSecondary from "./TmpCardSecondary.vue";
 import TmpCard from "./TmpCard.vue";
 import TmpSection from "./TmpSection.vue";
 export default {
-  components: { TmpSection, TmpCard, ATitle, AText, AButton },
+  components: {
+    TmpSection,
+    TmpCard,
+    ATitle,
+    AText,
+    AButton,
+    ASubTitle,
+    TmpCardSecondary,
+  },
   name: "TmpMain",
+  data() {
+    return {
+      cards: [
+        {
+          src: "img/home-5-image-box-01.png",
+          title: "Idea Discussion",
+          text: "get teamed up with the specialist who work and teach coding for years at famous universities",
+        },
+        {
+          src: "img/home-5-image-box-02.png",
+          title: "Web development",
+          text: "get teamed up with the specialist who work and teach coding for years at famous universities",
+        },
+        {
+          src: "img/home-5-image-box-03.png",
+          title: "System Administration",
+          text: "get teamed up with the specialist who work and teach coding for years at famous universities",
+        },
+        {
+          src: "img/home-5-image-box-04.png",
+          title: "Graphic Design",
+          text: "get teamed up with the specialist who work and teach coding for years at famous universities",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -48,11 +124,12 @@ export default {
   padding: var(--p-xl);
   &_card {
     margin-top: var(--m-xxl);
+    width: 70%;
   }
 }
 .hero-overlay {
   width: 100%;
-  position: absolute;
+  position: relative;
   background-color: var(--clr-bg-header);
   z-index: -2;
   &:after {
@@ -69,6 +146,33 @@ export default {
     transform: rotate(180deg);
     transform: scaleY(-1);
     z-index: -1;
+  }
+}
+.class_list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.class {
+  padding-top: 4rem;
+  &_title {
+    margin: var(--m-lg);
+  }
+}
+.carrier {
+  &_img {
+    position: relative;
+    &_one {
+      position: absolute;
+      z-index: -1;
+      top: 20%;
+      left: -6rem;
+      height: 22rem;
+    }
+    &_two {
+      position: relative;
+      right: -20px;
+    }
   }
 }
 </style>

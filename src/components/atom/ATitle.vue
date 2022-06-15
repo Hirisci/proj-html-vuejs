@@ -1,7 +1,6 @@
 <template>
   <component class="title" :is="tag">
-    {{ text }}
-    <span v-if="textColor">{{ textColor }}</span>
+    {{ text }} <span v-if="textColor">{{ textColor }}</span>
   </component>
 </template>
 
