@@ -16,7 +16,7 @@
           <template #footer>
             <AButton>
               <template #icon>
-                <FaS icon="downToBracket" />
+                <FaS icon="download" />
               </template>
               Download free E-book
             </AButton>

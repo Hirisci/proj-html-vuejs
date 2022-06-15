@@ -1,6 +1,10 @@
 <template>
-  <slot name="icon" />
-  <component :is="tag"><slot /></component>
+  <component :is="tag">
+    <span><slot name="icon" /></span>
+    <span>
+      <slot />
+    </span>
+  </component>
 </template>
 
 <script>
@@ -20,5 +24,7 @@ button {
   color: var(--clr-txt-1);
   border: 1px solid --clr-txt-1;
   border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
 }
 </style>
