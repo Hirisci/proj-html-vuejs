@@ -17,7 +17,7 @@
             MARGIN
     ╚════════════════════════════╝*/
 
-  $prefix: 'margin';
+  $prefix: 'm';
 
   @each $name, $unit in $units {
     --#{$prefix}#{$name}: #{$unit};
@@ -27,7 +27,7 @@
             PADDING
     ╚════════════════════════════╝*/
 
-  $prefix: 'padding';
+  $prefix: 'p';
 
   @each $name, $unit in $units {
     --#{$prefix}#{$name}: #{$unit};

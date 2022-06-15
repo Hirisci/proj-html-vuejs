@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/img/logo.png" alt="" />
+  <img src="@/assets/img/dark-logo.png" alt="" />
 </template>
 
 <script>
@@ -10,6 +10,6 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  height: 100%;
+  width: 10rem;
 }
 </style>
