@@ -18,6 +18,7 @@ li {
   align-items: center;
   gap: var(--p-sm);
   text-transform: capitalize;
+  cursor: pointer;
   .icon {
     margin-top: 3px;
     font-size: 0.75rem;

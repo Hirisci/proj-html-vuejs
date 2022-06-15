@@ -10,6 +10,7 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 10rem;
+  display: block;
+  height: 50%;
 }
 </style>

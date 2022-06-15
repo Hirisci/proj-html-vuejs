@@ -13,7 +13,7 @@
 import ANavItem from "../atom/ANavItem.vue";
 export default {
   components: { ANavItem },
-  name: "OrgNavBar",
+  name: "ONavBar",
   data() {
     return {
       items: [
