@@ -19,4 +19,7 @@ export default {
 .svg-inline--fa {
   vertical-align: -3px;
 }
+.mt {
+  margin-top: var(--m-md);
+}
 </style>
