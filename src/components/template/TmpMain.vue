@@ -78,6 +78,25 @@
       <ANumber number="200" text="online instructors" />
       <ANumber number="100%" text="satisfaction rate" />
     </TmpSectionSingle>
+    <!-- /section info -->
+    <!-- section course -->
+    <TmpSectionSingle>
+      <OListCourse>
+        <template #header>
+          <ASubTitle text="chose where you'd like to begin" />
+          <ATitle
+            class="class_title"
+            text="Latest Featured"
+            textColor="Courses"
+          />
+        </template>
+        <template #footer>
+          <AButton>
+            <template #icon> View all courses </template>
+            <FaS class="icon" icon="arrow-right-long" /> </AButton
+        ></template>
+      </OListCourse>
+    </TmpSectionSingle>
   </main>
 </template>
 
@@ -92,6 +111,7 @@ import TmpSection from "./TmpSection.vue";
 import OTabList from "../organism/OTabList.vue";
 import TmpSectionSingle from "./TmpSectionSingle.vue";
 import ANumber from "../atom/ANumber.vue";
+import OListCourse from "../organism/OListCourse.vue";
 export default {
   components: {
     TmpSection,
@@ -104,6 +124,7 @@ export default {
     OTabList,
     TmpSectionSingle,
     ANumber,
+    OListCourse,
   },
   name: "TmpMain",
   data() {

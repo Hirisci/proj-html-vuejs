@@ -16,4 +16,7 @@ export default {
 
 <style lang="scss">
 @import "./assets/style/style.scss";
+.svg-inline--fa {
+  vertical-align: -3px;
+}
 </style>
