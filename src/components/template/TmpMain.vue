@@ -80,23 +80,86 @@
     </TmpSectionSingle>
     <!-- /section info -->
     <!-- section course -->
-    <TmpSectionSingle>
-      <OListCourse>
+    <div class="wrapper-course">
+      <TmpSectionSingle>
+        <OListCourse>
+          <template #header>
+            <ASubTitle text="chose where you'd like to begin" />
+            <ATitle
+              class="class_title"
+              text="Latest Featured"
+              textColor="Courses"
+            />
+          </template>
+          <template #footer>
+            <AButton>
+              <template #icon> View all courses </template>
+              <FaS class="icon" icon="arrow-right-long" /> </AButton
+          ></template>
+        </OListCourse>
+      </TmpSectionSingle>
+    </div>
+    <!-- /section course -->
+    <!-- section learn pace -->
+    <TmpSection class="learn">
+      <template #img>
+        <div class="learn_img">
+          <img class="img-1" src="@/assets/img/home-5-image-01.png" alt="" />
+          <img
+            class="img-2"
+            src="@/assets/screenshot/underlay-shape-grey.svg"
+            alt=""
+          />
+          <img class="img-3" src="@/assets/img/maxcoach-shape-05.png" alt="" />
+        </div>
+      </template>
+      <TmpCard>
         <template #header>
-          <ASubTitle text="chose where you'd like to begin" />
-          <ATitle
-            class="class_title"
-            text="Latest Featured"
-            textColor="Courses"
+          <ASubTitle text="why hesitate to register?" />
+          <ATitle class="mt" text="Learn at your" />
+          <ATitle class="mt" text="Own" textColor="Pace" />
+        </template>
+        <template #body>
+          <OCheckList />
+        </template>
+        <template #footer>
+          <AButton> Get started fro free </AButton>
+        </template>
+      </TmpCard>
+    </TmpSection>
+    <!-- /section learn pace -->
+    <!-- section mobile -->
+    <TmpSection :isReverse="true" class="mobile">
+      <template #img>
+        <div class="mobile_img">
+          <img class="img-4" src="@/assets/img/maxcoach-shape-01.png" alt="" />
+          <img class="img-1" src="@/assets/img/home-5-image-02.png" alt="" />
+          <img
+            class="img-2"
+            src="@/assets/screenshot/underlay-shape-grey.svg"
+            alt=""
+          />
+          <img class="img-3" src="@/assets/img/maxcoach-shape-07.png" alt="" />
+        </div>
+      </template>
+      <TmpCard>
+        <template #header>
+          <ASubTitle text="what are you looking for?" />
+          <ATitle class="mt" text="learn on your" textColor="mobile" />
+          <ATitle class="mt" text="anytime!" />
+        </template>
+        <template #body>
+          <AText
+            text="save lessons for later and revise or write notes at any time and on multiple devices on your way. Never interfere with activities of enjoyment or other precious moments."
           />
         </template>
         <template #footer>
-          <AButton>
-            <template #icon> View all courses </template>
-            <FaS class="icon" icon="arrow-right-long" /> </AButton
-        ></template>
-      </OListCourse>
-    </TmpSectionSingle>
+          <AButton> Download our App </AButton>
+        </template>
+      </TmpCard>
+    </TmpSection>
+    <!-- /section mobile -->
+    <!-- section mobile -->
   </main>
 </template>
 
@@ -112,6 +175,7 @@ import OTabList from "../organism/OTabList.vue";
 import TmpSectionSingle from "./TmpSectionSingle.vue";
 import ANumber from "../atom/ANumber.vue";
 import OListCourse from "../organism/OListCourse.vue";
+import OCheckList from "../organism/OCheckList.vue";
 export default {
   components: {
     TmpSection,
@@ -125,6 +189,7 @@ export default {
     TmpSectionSingle,
     ANumber,
     OListCourse,
+    OCheckList,
   },
   name: "TmpMain",
   data() {
@@ -216,6 +281,70 @@ export default {
       margin-bottom: var(--m-md);
     }
   }
+}
+.wrapper-course {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    background-image: url("@/assets/screenshot/Untitled.svg");
+    bottom: -190px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.learn {
+  padding: var(--var-xl);
+  margin: 8rem 0;
+  &_img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .img-2 {
+      z-index: -1;
+      width: 70%;
+      top: 25%;
+      left: -12%;
+      position: absolute;
+    }
+    .img-3 {
+      z-index: -1;
+      position: relative;
+      top: 100px;
+      left: -50px;
+      border-radius: 100%;
+    }
+  }
+}
+
+.mobile_img {
+  display: flex;
+  position: relative;
+  align-items: center;
+  .img-3 {
+    z-index: -1;
+    position: relative;
+    top: 70px;
+    right: 80px;
+  }
+  .img-2 {
+    position: absolute;
+    top: 60px;
+    width: 70%;
+    z-index: -2;
+  }
+  .img-4 {
+    position: relative;
+    left: -105px;
+  }
+}
+.mt {
+  margin-top: var(--m-md);
 }
 </style>
 

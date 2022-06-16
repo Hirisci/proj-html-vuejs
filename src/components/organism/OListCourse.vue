@@ -98,6 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 .course {
+  position: relative;
   &_header {
     text-align: center;
     padding: var(--p-xl);

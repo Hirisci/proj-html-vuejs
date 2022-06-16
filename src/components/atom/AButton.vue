@@ -1,6 +1,6 @@
 <template>
   <component :is="tag">
-    <span><slot name="icon" /></span>
+    <span v-show="$slots.icon"><slot name="icon" /></span>
     <span>
       <slot />
     </span>
