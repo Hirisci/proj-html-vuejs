@@ -65,9 +65,19 @@
           <ATitle text="construct a " textColor="stunning" />
           <ATitle text="career perspective" />
         </div>
-        <div class="carrier_content-body"></div>
+        <div class="carrier_content-body">
+          <OTabList />
+        </div>
       </div>
     </TmpSection>
+    <!-- /section carrier -->
+    <!-- section info -->
+    <TmpSectionSingle>
+      <ANumber number="1.926" text="finished sessions" />
+      <ANumber number="3.092+" text="enrolled learners" />
+      <ANumber number="200" text="online instructors" />
+      <ANumber number="100%" text="satisfaction rate" />
+    </TmpSectionSingle>
   </main>
 </template>
 
@@ -79,6 +89,9 @@ import ATitle from "../atom/ATitle.vue";
 import TmpCardSecondary from "./TmpCardSecondary.vue";
 import TmpCard from "./TmpCard.vue";
 import TmpSection from "./TmpSection.vue";
+import OTabList from "../organism/OTabList.vue";
+import TmpSectionSingle from "./TmpSectionSingle.vue";
+import ANumber from "../atom/ANumber.vue";
 export default {
   components: {
     TmpSection,
@@ -88,6 +101,9 @@ export default {
     AButton,
     ASubTitle,
     TmpCardSecondary,
+    OTabList,
+    TmpSectionSingle,
+    ANumber,
   },
   name: "TmpMain",
   data() {
@@ -154,7 +170,6 @@ export default {
   gap: 2rem;
 }
 .class {
-  padding-top: 4rem;
   &_title {
     margin: var(--m-lg);
   }
@@ -166,12 +181,18 @@ export default {
       position: absolute;
       z-index: -1;
       top: 20%;
-      left: -6rem;
+      left: rem;
       height: 22rem;
     }
     &_two {
       position: relative;
-      right: -20px;
+      right: -6.25rem;
+    }
+  }
+  &_content-title {
+    margin: var(--m-lg) 0;
+    > * {
+      margin-bottom: var(--m-md);
     }
   }
 }

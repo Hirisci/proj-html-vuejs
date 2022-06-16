@@ -22,7 +22,7 @@ button {
   background-color: var(--clr-primary);
   font-weight: 600;
   color: var(--clr-txt-1);
-  border: 1px solid --clr-txt-1;
+  border: 1px solid var(--clr-txt-1);
   border-radius: 0.5rem;
   display: flex;
   gap: 1rem;

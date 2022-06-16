@@ -36,10 +36,14 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  margin: var(--hgt-space-section) auto;
   display: flex;
   justify-content: space-between;
   &.reverse {
     flex-direction: row-reverse;
+  }
+  .content {
+    width: 55%;
   }
 
   &.center {
