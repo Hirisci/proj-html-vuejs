@@ -34,6 +34,7 @@ export default {
   &_img {
     img {
       width: 100%;
+      border-radius: 0.25rem;
     }
     position: relative;
     .card_price {

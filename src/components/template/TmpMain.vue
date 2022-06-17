@@ -7,6 +7,9 @@
     <TmpCourse />
     <TmpLearn />
     <TmpMobile />
+    <TmpEvents />
+    <TmpComment />
+    <TmpRegister />
   </main>
 </template>
 
@@ -18,6 +21,9 @@ import TmpInfo from "./section/TmpInfo.vue";
 import TmpCourse from "./section/TmpCourse.vue";
 import TmpLearn from "./section/TmpLearn.vue";
 import TmpMobile from "./section/TmpMobile.vue";
+import TmpEvents from "./section/TmpEvents.vue";
+import TmpComment from "./section/TmpComment.vue";
+import TmpRegister from "./section/TmpRegister.vue";
 export default {
   components: {
     TmpHero,
@@ -27,6 +33,9 @@ export default {
     TmpCourse,
     TmpLearn,
     TmpMobile,
+    TmpEvents,
+    TmpComment,
+    TmpRegister,
   },
   name: "TmpMain",
 };

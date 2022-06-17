@@ -1,6 +1,6 @@
 <template>
-  <section class="wrapper">
-    <div class="container">
+  <section :class="{ wrapper: !isColumn }">
+    <div class="container" :class="{ column: isColumn }">
       <slot />
     </div>
   </section>
@@ -9,6 +9,12 @@
 <script>
 export default {
   name: "TmpSectionSingle",
+  props: {
+    isColumn: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
 
@@ -23,5 +29,8 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  &.column {
+    flex-direction: column;
+  }
 }
 </style>

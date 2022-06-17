@@ -22,4 +22,7 @@ export default {
 .mt {
   margin-top: var(--m-md);
 }
+a:visited {
+  color: inherit;
+}
 </style>

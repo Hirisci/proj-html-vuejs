@@ -26,5 +26,10 @@ button {
   border-radius: 0.5rem;
   display: flex;
   gap: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  &:hover {
+    background-color: var(--clr-secondary);
+  }
 }
 </style>
